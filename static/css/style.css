@@ -1,5 +1,70 @@
 html {
-    background-color: blue;
+    background-color: white;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+/* Heading, Menu, Navigation Block */
+.banner {
+  background-color: #37beef;
+  top: 16px;
+  width: 100%;
+  margin: 0;
+}
+
+/* Website Name Heading */
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font: Verdana, Helvetica, sans-serif;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 4px;
+    font-size: 80px;
+    margin: 16px;
+}
+
+/* Cart Bar */
+#myCart {
+    padding: 16px;
+    padding-top: 0px;
+}
+
+/* Cart Button */
+#viewCart {
+  background-image: url("/static/img/cart.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 50%;
+  height: 40px;
+  width: 40px;
+  border: solid;
+  border-width: 1px;
+}
+
+/* Close Cart Button */
+#closeCart {
+  background-image: url("/static/img/close.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 50%;
+  height: 40px;
+  width: 40px;
+  border: solid;
+  border-width: 1px;
+}
+
+#cartSummary {
+    display: inline;
+}
+
+#cartContents {
+    background-color: #37beef;
+    margin: 16px;
+    padding: 16px;
+}
+
+table {
+    background-color: white;
+    border-color: black;
 }
 
 body {
@@ -10,8 +75,34 @@ body {
     width: 80%;
     margin: auto;
     margin-bottom: 0;
-    background-color: pink;
+    height:700px;
+    background-color: #37beef;;
     padding: 20px;
+
+}
+
+#productList {
+    width: 30%;
+    float: left;
+    padding: 16px;
+}
+#moreDetails {
+    margin-left: 30%;
+    margin-top: 0px;
+    border: solid;
+    width: 70%;
+    margin-bottom: 16px;
+}
+
+/* Close Cart Button */
+#closeBt {
+  background-image: url("/static/img/close.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 50%;
+  height: 40px;
+  width: 40px;
+  float: right;
 }
 
 #message {
@@ -24,12 +115,6 @@ body {
     font-family: fixed;
 }
 
-.banner {
-    font-family: cursive, sans-serif;
-    text-align: center;
-    background-color: #ffcc33;
-    margin: 0;
-    padding: 10px;
-    height: 80px;
-
+#addToCart li {
+    list-style: none;
 }

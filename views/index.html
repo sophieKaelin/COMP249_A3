@@ -11,41 +11,58 @@
         <h1>The WT</h1>
     </header>
 
+    <div id="myCart">
+        <button id="viewCart"></button>
+        <button id="closeCart"></button>
+        <h3 id="cartSummary"></h3>
+        <div id="cartContents" hidden>
+            <table id="cartTable" border="1px">
+                <thead>
+                    <tr>
+                        <td>Product Name</td>
+                        <td>Quantity</td>
+                        <td>Cost</td>
+                    </tr>
+                </thead>
+                <tbody id="cartBody">
+
+                </tbody>
+            </table>
+            <h3 id="totalCost">Total Cost = $</h3>
+        </div>
+    </div>
+
     <div class="content">
 
-        <p>These URLs return JSON responses:</p>
-        <ul>
-            <li><a href="/products">List of Products</a></li>
-            <li><a href="/cart">Contents of Cart</a></li>
-        </ul>
+        <div id="productList">
+            <table border="1px">
+                <thead>
+                    <tr>
+                        <th id="sortN">Product Name</th>
+                        <th id="sortC">Price</th>
+                    </tr>
+                </thead>
+                <tbody id="tableOfProducts">
 
-        <p></p>
+                </tbody>
+            </table>
+        </div>
 
-        <form action="/cart" method="post">
+        <div hidden id="moreDetails" border="1px">
+            <button hidden id='closeBt'></button><br>
+            <p id="details"></p>
+            <form hidden id="addToCart" action="/cart" method="post">
             <fieldset>
-                <legend>This form will add to the cart with a given product id</legend>
+                <legend>Add Item to Cart</legend>
                 <ul>
-                    <li>Product: <input type="number" name="productid"></li>
+                    <li hidden>Product: <input id="prodInput" value ="-1" type="number" name="productid"></li>
                     <li>Quantity: <input type="number" name="quantity"></li>
-                    <li><input type="submit"></li>
+                    <li><input id="submitCart" type="submit" value="Add To Cart"></li>
                 </ul>
                 <input type="hidden" name="update" value="0">
             </fieldset>
         </form>
-
-        <form action="/cart" method="post">
-            <fieldset>
-                <legend>This form will update the cart with a given product id, or remove if quantity=0</legend>
-                <ul>
-                    <li>Product: <input type="number" name="productid"></li>
-                    <li>Quantity: <input type="number" name="quantity"></li>
-                    <li><input type="submit"></li>
-                </ul>
-                <input type="hidden" name="update" value="1">
-            </fieldset>
-        </form>
-
-     <div id="message"></div>
+        </div>
 
     </div>
 
